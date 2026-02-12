@@ -2,7 +2,8 @@ const app = document.getElementById('app');
 
 const phases = [
     { time: '2026-02-13T09:00:00', name: 'departure' },
-    { time: '2026-02-13T10:00:00', name: 'next' } // Siguiente fase
+    { time: '2026-02-13T10:00:00', name: 'beach-walk' },
+    { time: '2026-02-13T13:00:00', name: 'next' } // Siguiente fase
 ];
 
 function checkTime() {
@@ -13,9 +14,11 @@ function checkTime() {
         showHome();
     } else if (now >= new Date(phases[0].time) && now < new Date(phases[1].time)) {
         showDeparture();
+    } else if (now >= new Date(phases[1].time) && now < new Date(phases[2].time)) {
+        showBeachWalk();
     } else {
         // Aquí irán las siguientes fases
-        showDeparture();
+        showBeachWalk();
     }
 }
 
@@ -35,8 +38,23 @@ function showDeparture() {
         <div class="phase">
             <h1>¡Es momento de ponerse en marcha, coger todo lo necesario y salir rumbo a nuestro desconocido destino!</h1>
             <p class="subtitle">No está muy claro allá donde vamos, pero por suerte hemos encontrado uno de los mejores copilotos posible que te ayudará en este corto trayecto</p>
+            <div class="countdown" id="countdown"></div>
+            <div class="countdown-label">para la siguiente sorpresa</div>
         </div>
     `;
+    updateCountdown(new Date('2026-02-13T10:00:00'));
+}
+
+function showBeachWalk() {
+    app.innerHTML = `
+        <div class="phase">
+            <h1>Como mi propia Ariel de cabello rojo fuego explorando nuevos horizontes, es momento de caminar junto al mar.</h1>
+            <p class="subtitle">Un paseo relajado pero con paso firme: tenemos 3 horas para recorrer esta ruta costera y desconectar rodeados de la naturaleza. Y aunque tu voz ya encanta mi mundo cada día, hoy el océano será nuestro escenario. ¡Que comience la aventura, mi princesa sirena!</p>
+            <div class="countdown" id="countdown"></div>
+            <div class="countdown-label">para continuar el día</div>
+        </div>
+    `;
+    updateCountdown(new Date('2026-02-13T13:00:00'));
 }
 
 function updateCountdown(targetDate) {
@@ -58,7 +76,7 @@ function updateCountdown(targetDate) {
         countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
     
-    setTimeout(updateCountdown, 1000);
+    setTimeout(() => updateCountdown(targetDate), 1000);
 }
 
 checkTime();
