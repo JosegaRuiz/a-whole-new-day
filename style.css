@@ -11,46 +11,96 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 #app {
     text-align: center;
     color: white;
-    padding: 2rem;
+    padding: 1.5rem;
     max-width: 600px;
+    width: 100%;
 }
 
 .home h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     line-height: 1.4;
     animation: fadeIn 2s ease-in;
 }
 
+@media (min-width: 768px) {
+    .home h1 {
+        font-size: 2.5rem;
+    }
+}
+
 .countdown {
-    margin-top: 3rem;
-    font-size: 3rem;
+    margin-top: 2rem;
+    font-size: 2rem;
     font-weight: bold;
     animation: fadeIn 2s ease-in 0.5s both;
 }
 
+@media (min-width: 768px) {
+    .countdown {
+        margin-top: 3rem;
+        font-size: 3rem;
+    }
+}
+
 .countdown-label {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-top: 1rem;
     opacity: 0.9;
 }
 
+@media (min-width: 768px) {
+    .countdown-label {
+        font-size: 1rem;
+    }
+}
+
 .phase h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     animation: fadeIn 2s ease-in;
 }
 
+@media (min-width: 768px) {
+    .phase h1 {
+        font-size: 2rem;
+    }
+}
+
 .phase .subtitle {
-    font-size: 1.2rem;
-    margin-top: 2rem;
+    font-size: 1rem;
+    margin-top: 1.5rem;
     opacity: 0.95;
     line-height: 1.6;
     animation: fadeIn 2s ease-in 0.5s both;
+}
+
+@media (min-width: 768px) {
+    .phase .subtitle {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+}
+
+.ticket {
+    max-width: 500px;
+    width: 100%;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in 1s both;
+}
+
+@media (min-width: 768px) {
+    .ticket {
+        width: 90%;
+        margin: 2rem auto;
+    }
 }
 
 @keyframes fadeIn {

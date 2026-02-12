@@ -3,7 +3,9 @@ const app = document.getElementById('app');
 const phases = [
     { time: '2026-02-13T09:00:00', name: 'departure' },
     { time: '2026-02-13T10:00:00', name: 'beach-walk' },
-    { time: '2026-02-13T13:00:00', name: 'next' } // Siguiente fase
+    { time: '2026-02-13T13:00:00', name: 'drive-to-lunch' },
+    { time: '2026-02-13T13:30:00', name: 'lunch' },
+    { time: '2026-02-13T15:30:00', name: 'next' } // Siguiente fase
 ];
 
 function checkTime() {
@@ -16,9 +18,13 @@ function checkTime() {
         showDeparture();
     } else if (now >= new Date(phases[1].time) && now < new Date(phases[2].time)) {
         showBeachWalk();
+    } else if (now >= new Date(phases[2].time) && now < new Date(phases[3].time)) {
+        showDriveToLunch();
+    } else if (now >= new Date(phases[3].time) && now < new Date(phases[4].time)) {
+        showLunch();
     } else {
         // Aquí irán las siguientes fases
-        showBeachWalk();
+        showLunch();
     }
 }
 
@@ -55,6 +61,31 @@ function showBeachWalk() {
         </div>
     `;
     updateCountdown(new Date('2026-02-13T13:00:00'));
+}
+
+function showDriveToLunch() {
+    app.innerHTML = `
+        <div class="phase">
+            <h1>¡Hora de volver al coche y poner rumbo a nuestro próximo destino!</h1>
+            <p class="subtitle">Después de ese paseo mágico junto al mar, es momento de reponer energías. Esta vez, tu copiloto de confianza te guiará hasta el lugar perfecto para disfrutar de una comida especial.</p>
+            <div class="countdown" id="countdown"></div>
+            <div class="countdown-label">para llegar a nuestro destino</div>
+        </div>
+    `;
+    updateCountdown(new Date('2026-02-13T13:30:00'));
+}
+
+function showLunch() {
+    app.innerHTML = `
+        <div class="phase">
+            <h1>¡Bienvenida a Voltereta!</h1>
+            <p class="subtitle">Como Blancanieves cantando rodeada de sus amigos alados, aquí podrás disfrutar de una comida deliciosa mientras ejerces de ornitóloga observando las aves en su hábitat natural. Después de nuestra aventura junto al mar, es momento de reponer fuerzas en el lugar perfecto donde gastronomía y naturaleza se encuentran. ¡Que aproveche, mi princesa!</p>
+            <img src="reserva_voltereta.jpg" alt="Reserva Voltereta" class="ticket">
+            <div class="countdown" id="countdown"></div>
+            <div class="countdown-label">para la siguiente aventura</div>
+        </div>
+    `;
+    updateCountdown(new Date('2026-02-13T15:30:00'));
 }
 
 function updateCountdown(targetDate) {
