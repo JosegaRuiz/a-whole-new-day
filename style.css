@@ -12,6 +12,216 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    transition: background 0.5s ease;
+}
+
+body.bg-fase-1 {
+    background: url('fase_1.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+body.bg-fase-1::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.bg-fase-2 {
+    background: url('fase_2.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+body.bg-fase-2::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.bg-fase-3 {
+    background: url('fase_3.jpeg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+body.bg-fase-3::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.bg-fase-4 {
+    background: url('fase_4.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+body.bg-fase-4::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.bg-fase-5 {
+    background: url('fase_5.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+body.bg-fase-5::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.bg-fase-6 {
+    background: url('fase_6.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+body.bg-fase-6::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.bg-fase-7 {
+    background: url('fase_7.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+body.bg-fase-7::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.bg-fase-8 {
+    background: url('fase_8.jpg') center/contain no-repeat fixed;
+    background-color: #000;
+    position: relative;
+}
+
+body.bg-fase-8::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.bg-fase-9 {
+    background: url('fase_9.avif') center/contain no-repeat fixed;
+    background-color: #000;
+    position: relative;
+}
+
+body.bg-fase-9::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.bg-fase-10 {
+    background: url('fase_10.jpeg') center/contain no-repeat fixed;
+    background-color: #000;
+    position: relative;
+}
+
+body.bg-fase-10::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.bg-fase-11 {
+    background: url('fase_11.jpg') center/contain no-repeat fixed;
+    background-color: #000;
+    position: relative;
+}
+
+body.bg-fase-11::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.bg-fase-12 {
+    background: url('fase_12.jpg') center/contain no-repeat fixed;
+    background-color: #000;
+    position: relative;
+}
+
+body.bg-fase-12::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    pointer-events: none;
 }
 
 #app {
@@ -20,6 +230,8 @@ body {
     padding: 1.5rem;
     max-width: 600px;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .home h1 {
