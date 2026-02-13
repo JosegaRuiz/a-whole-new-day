@@ -18,30 +18,44 @@ function checkTime() {
     const now = new Date();
     const startDate = new Date('2026-02-13T09:00:00');
     
+    // Cambiar fondo según la fase
+    document.body.className = '';
+    
     if (now < startDate) {
+        document.body.classList.add('bg-fase-1');
         showHome();
     } else if (now >= new Date(phases[0].time) && now < new Date(phases[1].time)) {
+        document.body.classList.add('bg-fase-2');
         showDeparture();
     } else if (now >= new Date(phases[1].time) && now < new Date(phases[2].time)) {
+        document.body.classList.add('bg-fase-3');
         showBeachWalk();
     } else if (now >= new Date(phases[2].time) && now < new Date(phases[3].time)) {
+        document.body.classList.add('bg-fase-4');
         showDriveToLunch();
     } else if (now >= new Date(phases[3].time) && now < new Date(phases[4].time)) {
+        document.body.classList.add('bg-fase-5');
         showLunch();
     } else if (now >= new Date(phases[4].time) && now < new Date(phases[5].time)) {
+        document.body.classList.add('bg-fase-6');
         showGift();
     } else if (now >= new Date(phases[5].time) && now < new Date(phases[6].time)) {
+        document.body.classList.add('bg-fase-7');
         showDriveTogether();
     } else if (now >= new Date(phases[6].time) && now < new Date(phases[7].time)) {
+        document.body.classList.add('bg-fase-8');
         showLorcana();
     } else if (now >= new Date(phases[7].time) && now < new Date(phases[8].time)) {
+        document.body.classList.add('bg-fase-9');
         showDriveToDinner();
     } else if (now >= new Date(phases[8].time) && now < new Date(phases[9].time)) {
+        document.body.classList.add('bg-fase-10');
         showDinner();
     } else if (now >= new Date(phases[9].time) && now < new Date(phases[10].time)) {
+        document.body.classList.add('bg-fase-11');
         showWalkToPlaza();
     } else {
-        // Última fase del día
+        document.body.classList.add('bg-fase-12');
         showCarnival();
     }
 }
