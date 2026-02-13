@@ -49,7 +49,7 @@ function checkTime() {
 function showHome() {
     app.innerHTML = `
         <div class="home">
-            <h1>Estás a punto de adentrarte en un viaje mágico de un día</h1>
+            <h1>Como Geppetto deseando que su sueño cobrara vida, hoy ese deseo se hace realidad. Te voy a enseñar un mundo ideal: un día lleno de magia, sorpresas y aventuras que he preparado con ilusión para ti. Cada momento, cada parada, cada detalle... todo forma parte de esta historia que estamos a punto de vivir juntos. ¿Preparada para que la magia cobre vida?</h1>
             <div class="countdown" id="countdown"></div>
             <div class="countdown-label">para que comience la aventura</div>
         </div>
