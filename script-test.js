@@ -123,7 +123,7 @@ function showLunch() {
         <div class="phase">
             <h1>¡Bienvenida a Voltereta!</h1>
             <p class="subtitle">Como Blancanieves cantando rodeada de sus amigos alados, aquí podrás disfrutar de una comida deliciosa mientras ejerces de ornitóloga observando las aves en su hábitat natural. Después de nuestra aventura junto al mar, es momento de reponer fuerzas en el lugar perfecto donde gastronomía y naturaleza se encuentran. ¡Que aproveche, mi princesa!</p>
-            <img src="reserva_voltereta.jpg" alt="Reserva Voltereta" class="ticket">
+            <img src="Reserva_voltereta.jpg" alt="Reserva Voltereta" class="ticket">
             <div class="countdown" id="countdown"></div>
             <div class="countdown-label">para la siguiente aventura</div>
         </div>
